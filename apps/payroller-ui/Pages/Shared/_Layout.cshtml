@@ -4,15 +4,23 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Payroller</title>
+
+
+    <link href="https://localhost:7088/css/site.css" rel="stylesheet" />
+    <script src="https://localhost:7088/js/site.js"></script>
 </head>
 <body>
 
     @RenderBody()
 
-    <div id="root"></script>
+    <div id="root"></div>
 
     <script src="~/bundle.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+        doThing();
+    </script>
 </body>
 </html>
