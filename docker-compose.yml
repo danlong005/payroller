@@ -1,0 +1,23 @@
+version: '3.8'
+
+networks:
+  payroller: {}
+
+services:
+  theme.service:
+    network: payroller
+    build:
+      context: ./services/themes
+      dockerfile: Dockerfile
+
+  payroller.app:
+    network: payroller
+    build: 
+      context: ./apps/payroller-ui
+      dockerfile: Dockerfile
+
+  database:
+    network: payrollder
+    build: 
+      context: ./database
+      dockerfile: Dockerfile
